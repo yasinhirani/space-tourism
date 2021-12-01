@@ -1,0 +1,25 @@
+<div class="technology w-100 h-100 overflow-hidden d-flex flex-column">
+    <app-header></app-header>
+    <main class="flex-grow-1 d-flex flex-column justify-content-start justify-content-md-center overflow-auto">
+        <div class="p-5">
+            <p class="mb-0 text-uppercase font-xxl text-white">03 Space launch 101</p>
+        </div>
+        <div class="d-flex flex-column-reverse flex-md-row justify-content-between">
+            <div class="p-5 d-flex flex-column flex-md-row align-items-center">
+                <div class="buttons">
+                    <button routerLink="/technology/launch" routerLinkActive="active-button" (click)="getTechnology(0)" class="custom-button btn mb-0 my-4 d-inline d-md-block mx-3 mx-md-0">1</button>
+                    <button routerLink="/technology/space-port" routerLinkActive="active-button" (click)="getTechnology(1)" class="custom-button btn mb-0 my-4 d-inline d-md-block mx-3 mx-md-0">2</button>
+                    <button routerLink="/technology/space-capsule" routerLinkActive="active-button" (click)="getTechnology(2)" class="custom-button btn mb-0 my-4 d-inline d-md-block mx-3 mx-md-0">3</button>
+                </div>
+                <div class="ml-0 ml-md-5">
+                    <p class="mb-0 text-uppercase text-white font-lg">The terminology...</p>
+                    <p class="mb-0 crew-name">{{technologyDetails.name}}</p>
+                    <p class="mb-0 space-desc">{{technologyDetails.description}}</p>
+                </div>
+            </div>
+            <figure class="mb-0">
+                <img class="img-fluid" src={{technologyDetails.images.landscape}} alt="">
+            </figure>
+        </div>
+    </main>
+</div>

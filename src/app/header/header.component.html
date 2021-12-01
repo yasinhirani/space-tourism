@@ -1,0 +1,17 @@
+<div class="w-100 py-4">
+    <header class="header d-flex justify-content-between align-items-center">
+        <figure class="mb-0 px-5 main-logo">
+            <a routerLink="/home" href="#">
+                <img src="../../assets/images/shared/logo.svg" alt="space">
+            </a>
+        </figure>
+        <input type="checkbox" name="hamburger" id="hamburger" (change)="toggle($event)">
+        <ul class="nav-list nav flex-column flex-md-row text-white pl-5">
+            <li class="nav-item px-4 px-md-2 px-lg-4"><a routerLink="/home" routerLinkActive="active" class="py-4 nav-link" href="#">00 Home</a></li>
+            <li class="nav-item px-4 px-md-2 px-lg-4"><a routerLink="/destination/moon" routerLinkActive="active" class="py-4 nav-link" href="#">01 Destination</a></li>
+            <li class="nav-item px-4 px-md-2 px-lg-4"><a routerLink="/crew/douglas" routerLinkActive="active" class="py-4 nav-link" href="#">02 Crew</a></li>
+            <li class="nav-item px-4 px-md-2 px-lg-4"><a routerLink="/technology/launch" routerLinkActive="active" class="py-4 nav-link" href="#">03 Technology</a></li>
+        </ul>
+        <label class="d-block d-md-none bars" for="hamburger"><span class="fa fa-bars px-4 text-white"></span></label>
+    </header>
+</div>

@@ -1,0 +1,33 @@
+<div class="destination w-100 h-100 overflow-hidden d-flex flex-column">
+    <app-header></app-header>
+    <main class="flex-grow-1 overflow-auto d-flex flex-column justify-content-md-center align-items-center align-items-md-stretch">
+        <div class="p-2 p-md-5">
+            <p class="mb-0 text-uppercase font-xxl text-white text-center text-md-left">01 Pick your destination</p>
+        </div>
+        <div class="p-3 p-md-5 d-flex flex-column flex-md-row align-items-center justify-content-around">
+            <figure class="mb-4 mb-md-0">
+                <img class="img-fluid" src={{spaceDetails.images.png}} alt="">
+            </figure>
+            <div class="ml-3">
+                <ul class="nav space-name mb-4">
+                    <li (click)="getDestination('Moon')" class="nav-item px-3 px-md-4 "><a class="nav-link px-0" routerLink="/destination/moon" routerLinkActive="active" href="#">Moon</a></li>
+                    <li (click)="getDestination('Mars')" class="nav-item px-3 px-md-4 "><a class="nav-link px-0" routerLink="/destination/mars" routerLinkActive="active" href="#">Mars</a></li>
+                    <li (click)="getDestination('Europa')" class="nav-item px-3 px-md-4 "><a class="nav-link px-0" routerLink="/destination/europa" routerLinkActive="active" href="#">Europa</a></li>
+                    <li (click)="getDestination('Titan')" class="nav-item px-3 px-md-4 "><a class="nav-link px-0" routerLink="/destination/titan" routerLinkActive="active" href="#">Titan</a></li>
+                </ul>
+                <h1 class="mb-0 space">{{spaceDetails.name}}</h1>
+                <p class="space-desc">{{spaceDetails.description}}</p>
+                <div class="d-flex align-items-center justify-content-between text-white mt-5">
+                    <div>
+                        <p class="mb-0 text-uppercase">Avg. Distance</p>
+                        <p class="font-xxl">{{spaceDetails.distance}}</p>
+                    </div>
+                    <div>
+                        <p class="mb-0 text-uppercase">Est. travel time</p>
+                        <p class="font-xxl">{{spaceDetails.travel}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>

@@ -1,0 +1,24 @@
+<div class="crew w-100 h-100 overflow-hidden d-flex flex-column">
+    <app-header></app-header>
+    <main class="flex-grow-1 d-flex flex-column overflow-auto justify-content-start justify-content-sm-end">
+        <div class="px-5 pt-5">
+            <p class="mb-0 font-xxl text-uppercase text-white text-center text-md-left">02 Meet your crew</p>
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-around">
+                <div class="mb-4 mb-md-0">
+                    <p class="mb-0 font-xxl text-white crew-name">{{crewDetails.role}}</p>
+                    <p class="mb-0 crew-name">{{crewDetails.name}}</p>
+                    <p class="space-desc">{{crewDetails.bio}}</p>
+                    <div class="crew-carousal mt-5">
+                        <a routerLink="/crew/douglas" routerLinkActive="active-circle" href="#"><span (click)="getCrew(0)" class="fa fa-circle mr-2"></span></a>
+                        <a routerLink="/crew/mark" routerLinkActive="active-circle" href="#"><span (click)="getCrew(1)" class="fa fa-circle mx-2"></span></a>
+                        <a routerLink="/crew/victor" routerLinkActive="active-circle" href="#"><span (click)="getCrew(2)" class="fa fa-circle mx-2"></span></a>
+                        <a routerLink="/crew/anousheh" routerLinkActive="active-circle" href="#"><span (click)="getCrew(3)" class="fa fa-circle mx-2"></span></a>
+                    </div>
+                </div>
+                <figure class="mb-0 crew-image">
+                    <img class="img-fluid" src={{crewDetails.images.png}} alt="">
+                </figure>
+            </div> 
+        </div>
+    </main>
+</div>

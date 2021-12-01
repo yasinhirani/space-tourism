@@ -1,0 +1,160 @@
+.home{
+    background-image: url('../../../assets/images/home/background-home-desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.space{
+    font-size: 8rem;
+    @include media-breakpoint-down(sm){
+        font-size: 4rem;
+    }
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Bellefair', serif;
+    color: white;
+}
+.home-paragraph{
+    width: 50ch;
+    @include media-breakpoint-down(sm){
+        width: 40ch;
+    }
+}
+.explore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 300px;
+    height: 300px;
+    @include media-breakpoint-down(sm){
+        width: 200px;
+        height: 200px;
+    }
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    &:hover{
+        &::before{
+            transform: scale(1.5);
+        }
+    }
+    &::before{
+        content: "";
+        position: absolute;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        background-color: rgba($color: #ffffff, $alpha: .2);
+        transition: all .3s ease-in-out;
+        @include media-breakpoint-down(sm){
+            width: 200px;
+            height: 200px;
+        }
+    }
+    p{
+        font-family: 'Bellefair', serif;
+        font-size: 36px;
+    }
+}
+
+.active{
+    color: white;
+    border-bottom: 3px solid white;
+}
+
+// Destination
+
+.destination{
+    background-image: url('../../../assets/images/destination/background-destination-desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+// .space-name{
+//     li{
+//         a{
+//             transition: all .2s ease-in-out;
+//             white-space: nowrap;
+//             border-bottom: 3px solid transparent;
+//             color: white;
+//             &:hover{
+//                 color: white;
+//                 border-bottom: 3px solid white;
+//             }
+//         }
+//     }
+// }
+.space-desc{
+    width: 50ch;
+    color: white;
+    @include media-breakpoint-down(sm){
+        width: 40ch;
+    }
+}
+
+// Crew
+
+.crew{
+    background-image: url('../../../assets/images/crew/background-crew-desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.crew-name{
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Bellefair', serif;
+    color: white;
+    @include media-breakpoint-down(sm){
+        font-size: 2rem;
+    }
+}
+
+.crew-image{
+    @include media-breakpoint-down(sm){
+        width: 260px;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+}
+
+.crew-carousal{
+    a{
+        &:hover{
+            color: white;
+        }
+    }
+}
+
+.active-circle{
+    color: white;
+}
+
+
+// Technology
+
+.technology{
+    background-image: url('../../../assets/images/technology/background-technology-desktop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.custom-button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    border: 1px solid rgba($color: #ffffff, $alpha: .3);
+    background-color: transparent;
+    &:hover{
+        background-color: white;
+        color: black;
+    }
+}
+
+.active-button{
+    background-color: white;
+    color: black;
+}
